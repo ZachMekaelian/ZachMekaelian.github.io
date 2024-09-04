@@ -12,11 +12,10 @@ window.onload = function() {
 
 // Function to start confetti (using canvas-confetti library)
 function startConfetti() {
-    // This triggers confetti using the canvas-confetti library
-    var confetti = require('canvas-confetti');
     confetti({
         particleCount: 100,
         spread: 70,
-        origin: { y: 0.6 }
+        origin: { y: 0.6 },
+        canvas: document.getElementById('confetti-canvas')
     });
 }
