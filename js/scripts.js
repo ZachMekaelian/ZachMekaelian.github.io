@@ -1,23 +1,35 @@
-// Wait for the page to load
 window.onload = function() {
-    // Create the canvas for confetti first, then append it to the body
-    let confettiCanvas = document.createElement('canvas');
-    confettiCanvas.id = 'confetti-canvas';
-    document.body.appendChild(confettiCanvas); // Append before starting confetti
-
-    // Play celebration music
+    // Play celebration music if you have any (check for the element id)
     let music = document.getElementById('celebration-music');
-    music.play();
+    if (music) {
+        music.play();
+    }
 
     // Trigger confetti after the name appears
     setTimeout(() => {
         startConfetti();
-    }, 3000); // Start confetti after the name appears
+    }, 3000); // Start confetti after 3 seconds
 };
 
-// Function to start confetti (using canvas-confetti library)
 function startConfetti() {
-    var confettiSettings = { target: 'confetti-canvas' };
-    var confetti = new ConfettiGenerator(confettiSettings);
-    confetti.render();
+    const confettiCanvas = document.getElementById('confetti-canvas');
+    const confetti = window.confetti.create(confettiCanvas, {
+        resize: true,
+        useWorker: true
+    });
+
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+
+    // Show the explore button after the confetti animation ends
+    setTimeout(() => {
+        document.getElementById('explore-button-container').classList.add('show');
+    }, 2500); // Show the button 2.5 seconds after starting confetti
 }
+
+document.getElementById('explore-button').addEventListener('click', () => {
+    window.location.href = 'homepage.html'; // Redirect to the homepage
+});
