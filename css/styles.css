@@ -46,6 +46,9 @@ body, html {
     padding: 0;
     height: 100%;
     background-color: black; /* Blank screen background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #welcome-screen {
@@ -53,6 +56,8 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    position: absolute;
 }
 
 #name {
