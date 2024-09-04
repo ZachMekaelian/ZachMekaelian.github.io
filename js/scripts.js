@@ -1,5 +1,10 @@
 // Wait for the page to load
 window.onload = function() {
+    // Create the canvas for confetti first, then append it to the body
+    let confettiCanvas = document.createElement('canvas');
+    confettiCanvas.id = 'confetti-canvas';
+    document.body.appendChild(confettiCanvas); // Append before starting confetti
+
     // Play celebration music
     let music = document.getElementById('celebration-music');
     music.play();
@@ -16,8 +21,3 @@ function startConfetti() {
     var confetti = new ConfettiGenerator(confettiSettings);
     confetti.render();
 }
-
-// Include canvas for confetti
-let confettiCanvas = document.createElement('canvas');
-confettiCanvas.id = 'confetti-canvas';
-document.body.appendChild(confettiCanvas);
