@@ -12,10 +12,12 @@ window.onload = function() {
 
 // Function to start confetti (using canvas-confetti library)
 function startConfetti() {
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-        canvas: document.getElementById('confetti-canvas')
-    });
+    var confettiSettings = { target: 'confetti-canvas' };
+    var confetti = new ConfettiGenerator(confettiSettings);
+    confetti.render();
 }
+
+// Include canvas for confetti
+let confettiCanvas = document.createElement('canvas');
+confettiCanvas.id = 'confetti-canvas';
+document.body.appendChild(confettiCanvas);
