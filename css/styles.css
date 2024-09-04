@@ -40,3 +40,36 @@ footer {
     width: 100%;
     bottom: 0;
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black; /* Blank screen background */
+}
+
+#welcome-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+#name {
+    color: white;
+    font-size: 50px;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    font-family: 'Arial', sans-serif;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Slight upward movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
