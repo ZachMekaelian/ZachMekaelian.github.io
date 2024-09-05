@@ -34,6 +34,18 @@ document.getElementById('explore-button').addEventListener('click', () => {
     window.location.href = 'homepage.html'; // Redirect to the homepage
 });
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        event.preventDefault();  // Prevent form submission
+    }
+});
+
+
 /*// Example function to fetch incidents from ServiceNow
 async function fetchIncidents() {
     const response = await fetch('https://your-instance.service-now.com/api/now/table/incident', {
