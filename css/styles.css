@@ -120,7 +120,9 @@ main {
     width: 80%;
     margin: 0 auto;
 }
+#latest-projects{
 
+}
 #intro, #latest-projects {
     margin-bottom: 40px;
 }
@@ -139,3 +141,43 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+#intro h2 {
+    border-bottom: 2px solid #333; /* Underline color and thickness */
+    padding-bottom: 10px; /* Space between text and underline */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+}
+
+#latest-projects h2 {
+    border-bottom: 2px solid #333; /* Underline color and thickness */
+    padding-bottom: 10px; /* Space between text and underline */
+    margin-bottom: 20px; /* Space below the heading */
+    text-align: center;
+}
+
+/* Add responsive design to your CSS */
+/*@media (max-width: 768px) {
+    #welcome-screen {
+        flex-direction: column;
+    }
+
+    #name {
+        font-size: 40px;
+    }
+
+    #explore-button {
+        font-size: 12px;
+    }
+}*/
+
+/* Adjustments for mobile view */
+/*@media (max-width: 480px) {
+    #name {
+        font-size: 30px;
+    }
+
+    #explore-button {
+        font-size: 10px;
+    }
+}*/

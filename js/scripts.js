@@ -33,3 +33,22 @@ function startConfetti() {
 document.getElementById('explore-button').addEventListener('click', () => {
     window.location.href = 'homepage.html'; // Redirect to the homepage
 });
+
+/*// Example function to fetch incidents from ServiceNow
+async function fetchIncidents() {
+    const response = await fetch('https://your-instance.service-now.com/api/now/table/incident', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer your_access_token',
+            'Content-Type': 'application/json'
+        }
+    });
+    const data = await response.json();
+    console.log(data);
+    return data.result;
+}
+
+// Call the function and handle the data
+fetchIncidents().then(incidents => {
+    // Do something with the incidents data
+});*/
