@@ -45,6 +45,40 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }
 });
 
+// Initialize EmailJS with your user ID
+(function() {
+    emailjs.init("ygH5gdM95WKmv30xC");  // Replace with your EmailJS user ID
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent the default form submission behavior
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        return;  // Exit the function if fields are empty
+    }
+
+    // Prepare email parameters
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message
+    };
+
+    // Send the email using EmailJS
+    emailjs.send("service_z7zke8g", "template_5bhalif", templateParams)
+        .then(function(response) {
+            alert('Message sent successfully!');
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            alert('Failed to send the message. Please try again later.');
+            console.log('FAILED...', error);
+        });
+});
 
 /*// Example function to fetch incidents from ServiceNow
 async function fetchIncidents() {
