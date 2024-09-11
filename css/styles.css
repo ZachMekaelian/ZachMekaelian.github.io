@@ -61,7 +61,7 @@ body {
 #welcome-screen #explore-button:hover {
     background-color: lightblue;
     color: black;
-    border-color: lightblue;
+    border-color: rgb(42, 41, 41);
 }
 
 #confetti-canvas {
@@ -250,27 +250,51 @@ footer {
     background-color: #4a89cd;
 }
 
-/**********************************************************************Social Links***********************************************************************/
-/* Styles for social media links */
+/**********************************************************************
+Social Links
+**********************************************************************/
 #social-links {
-    margin-top: 20px; /* Space above the social links section */
-    text-align: center; /* Center-align the links */
+    margin-top: 20px;
+    text-align: center; /* Center-align the heading and links */
 }
 
 #social-links h3 {
-    font-size: 20px; /* Font size for the heading */
-    margin-bottom: 10px; /* Space below the heading */
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 #social-links .social-link {
-    display: inline-block; /* Align links horizontally */
-    margin: 0 10px; /* Space between links */
-    text-decoration: none; /* Remove underline */
-    color: #007bff; /* Link color */
-    font-size: 16px; /* Font size */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 30px; /* Size of the icons */
+    margin: 0 10px;
+    transition: color 0.3s ease;
+    /*text-decoration: none;  Ensure no underline */
+    display: inline-block; /* Align icons horizontally */
 }
 
-#social-links .social-link:hover {
-    color: #0056b3; /* Color on hover */
+#social-links .fab {
+    color: #333; /* Default color */
+}
+
+/* Specific icon colors */
+#social-links .fa-linkedin {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+#social-links .fa-github {
+    color: #000; /* GitHub black */
+}
+
+#social-links .fa-instagram {
+    background: radial-gradient(circle at 30% 30%, #f58529 0%, #dd2a7b 50%, #8134af 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#social-links .fa-facebook {
+    color: #4267B2; /* Facebook blue */
+}
+
+/* Hover effects */
+#social-links .social-link:hover .fab {
+    color: #0056b3; /* Change the hover color */
 }

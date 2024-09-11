@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Zach Mekaelian</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact - Zach Mekaelian</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
 <body>
     <header>
         <div class="container">
@@ -30,22 +32,27 @@
                     <label for="email">Your Email:</label>
                     <input type="email" id="email" name="email" required>
                 
-                    <label for="message">Your Message for me:</label>
+                    <label for="message">Your Message for Me:</label>
                     <textarea id="message" name="message" required></textarea>
                 
                     <button type="submit">Send Message</button>
                 </form>                
             </div>
-            
-            <!-- Social Media Links Section -->
             <div id="social-links">
                 <h3>Connect with me:</h3>
-                <a href="https://www.linkedin.com/in/zachary-mekaelian-78924524b/" target="_blank" class="social-link">LinkedIn</a>
-                <a href="https://github.com/ZachMekaelian" target="_blank" class="social-link">GitHub</a>
-                <a href="https://instagram.com/zach_mackiee" target="_blank" class="social-link">Instagram</a>
-                <a href="https://www.facebook.com/zmekaelian" target="_blank" class="social-link">Facebook</a>
-                <img src="C:\Users\Captain Zac\Desktop\webpage\ZachMekaelian.github.io\images\wechat.PNG" alt="WeChat QR Code" class="social-icon">
-            </div>
+                <a href="https://www.linkedin.com/in/zachary-mekaelian-78924524b/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/ZachMekaelian" target="_blank" class="social-link">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://instagram.com/zach_mackiee" target="_blank" class="social-link">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.facebook.com/zmekaelian" target="_blank" class="social-link">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </div>            
         </div>
     </main>
 
@@ -54,25 +61,29 @@
             <p>&copy; 2024 Zach Mekaelian. All rights reserved.</p>
         </div>
     </footer>
+    
     <script>
         // Initialize EmailJS with your public key
         (function() {
-            emailjs.init("your_public_key");  // Replace with your EmailJS public key
+            emailjs.init("ygH5gdM95WKmv30xC");  // Replace with your EmailJS public key
         })();
 
+        // Add an event listener to handle form submissions
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();  // Prevent the default form submission behavior
 
+            // Gather form data
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
+            // Validate form inputs
             if (!name || !email || !message) {
                 alert('Please fill out all fields.');
                 return;  // Exit the function if fields are empty
             }
 
-            // Prepare email parameters
+            // Define the email parameters for the template
             const templateParams = {
                 from_name: name,
                 from_email: email,
@@ -80,7 +91,7 @@
             };
 
             // Send the email using EmailJS
-            emailjs.send("your_service_id", "your_template_id", templateParams)
+            emailjs.send("service_z7zke8g", "template_5bhalif", templateParams)
                 .then(function(response) {
                     alert('Message sent successfully!');
                     console.log('SUCCESS!', response.status, response.text);
@@ -89,8 +100,6 @@
                     console.log('FAILED...', error);
                 });
         });
-
-        // Your existing confetti and other functions can go here
     </script>
 </body>
 </html>
