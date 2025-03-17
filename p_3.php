@@ -32,7 +32,7 @@
                 <p>Sam: </p>
                 <p>Finn: </p>
                 <p>Vance: </p>
-                <p>Jonny: </p>
+                <p>Johnnie: </p>
                 <p>Ben: </p>
                 <p>Teo: </p>
                 <p>Alex P: </p>
@@ -54,13 +54,13 @@
                 <p>Michelle: </p>
                 <p>Steven: </p>
                 <p>Deyanna: </p>
-                <p>: </p>
-                <p>Teo: </p>
-                <p>Teo: </p>
-                <p>Teo: </p>
-                <p>Teo: </p>
-                <p>Teo: </p>
-                <p>Teo: </p>
+                <p>Christopher: </p>
+                <p>Eric: </p>
+                <p>Logan: </p>
+                <p>Alec: </p>
+                <p>Robert: </p>
+                <p>Zach G: </p>
+                <p>Zach M.: </p>
                 <p>Teo: </p>
             </div>
         </section>
